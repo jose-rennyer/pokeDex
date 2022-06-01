@@ -1,0 +1,99 @@
+*{
+    box-sizing:border-box;
+}
+.main{
+    display:flex;
+    align-items:center;
+    width:750px;
+    height:600px;
+    background-color:#000;
+}
+.list-of-pokes{
+    margin:10px;
+    background:lightblue;
+    width:40%;
+    height:550px;
+}
+.pokemons-area{
+    margin:10px;
+    width:60%;
+    height:550px;
+    background:#f00;
+}
+.decoration-pokeDex{
+    height:110px;
+    background-color:pink;
+    padding:5px;
+    display:flex;
+}
+.recipe-of-giant{
+    background-color:#fff;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #000;
+}
+.giant-ball{
+    height: 80px;
+    width:80px;
+    background-color:cyan;
+    border-radius:50%;
+    border:1px solid #000;
+}
+.small-ball{
+    width:20px;
+    height:20px;
+    background-color:yellow;
+    border-radius:50%;
+    margin-left:10px;
+    border:1px solid #000;
+}
+
+.image-poke-estruct{
+    margin:0 auto;
+    width:80%;
+    height:240px;
+    background-color:#ccc;
+    margin-top:20px;
+    display:flex;
+    align-items:center;
+    border:1px solid #000;
+    border-radius:20px;
+}
+.pokemon{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    width:90%;
+    height:90%;
+    background-color:white;
+    border:1px solid #000;
+    border-radius:20px;
+}
+.poke-area{
+    width:100%;
+    border:1.5px solid #000;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+    height:80%;
+    display:flex;
+    overflow:hidden;
+}
+.front, .back{
+    width:50%;
+    height:100%;
+}
+
+.poke-name{
+    border:1.5px solid #000;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    height:20%;
+    margin:0;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+}
