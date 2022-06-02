@@ -1,7 +1,10 @@
 // requisição área depois eu vejo um nome melhor.
-let pokemonList = [];
 
-function puxe300Pokes(){
+document.querySelector(".front").style.opacity = 0;
+document.querySelector(".back").style.opacity = 0;
+let pokemonList = [];
+let listaDePokes = document.querySelector(".list-of-pokes");
+function pegarPokes(){
     pokemonList = [];
     for(let i = 1; i <= 898; i++){
         let url = new XMLHttpRequest();
@@ -12,13 +15,31 @@ function puxe300Pokes(){
             pokemonList.push(JsonPoke)
         }
     }
-    setTimeout(function(){
-        console.log(pokemonList);
-    }, 3000) 
 }
-let contador = 0;
-puxe300Pokes();
-document.addEventListener("keydown", function(){
+
+pegarPokes();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*document.addEventListener("keydown", function(){
     let pokemonDaVez = pokemonList.findIndex((item) => item.order == contador? true:false);
     if(pokemonDaVez > 0){
         console.log(pokemonDaVez)
@@ -28,6 +49,6 @@ document.addEventListener("keydown", function(){
     }
     
     contador++
-})
+})*/
 
 
