@@ -1,18 +1,49 @@
 *{
     box-sizing:border-box;
 }
+body{
+    font-family:'Orbitron', Arial, sans-serif, Helvetica;
+}
 .main{
+    margin:0 auto;
     display:flex;
     align-items:center;
     width:750px;
     height:600px;
-    background-color:#000;
+}
+.section-list-pokes{
+    margin:10px;
+    border:1px solid #000;
+}
+.find-poke{
+    width: 270px;
+    padding: 5px 5px;
+    border-bottom: 1px solid #000;
+    background-color: lightblue;
+    display: flex;
+}
+.input-poke{
+    font-size: 18px;
+    padding: 5px;
+    outline: 0;
+    width: 80%;
+}
+.bt-procura{
+    font-size: 18px;
+    padding: 5px;
+    width: 20%;
+    margin-left: 5px;
+    cursor:pointer;
+}
+.lupa{
+    width:15px;
+    height:15px;
 }
 .list-of-pokes{
-    margin:10px;
     background:lightblue;
-    width:40%;
-    height:550px;
+    transition:all ease 0.5s;
+    width:270px;
+    height:520px;
     overflow:auto;
 }
 .list-example{
@@ -20,6 +51,12 @@
     padding:5px 2px;
     text-align:center;
     border-bottom:1px solid #000;
+    transition:all 0.5s;
+    cursor:pointer;
+}
+.list-example:hover{
+    background-color:blue;
+    color:#ff0;
 }
 
 .pokemons-area{
@@ -27,12 +64,14 @@
     width:60%;
     height:550px;
     background:#f00;
+    border:1px solid #000;
 }
 .decoration-pokeDex{
     height:110px;
     background-color:pink;
     padding:5px;
     display:flex;
+    border-bottom:1px solid #000;
 }
 .recipe-of-giant{
     background-color:#fff;
@@ -180,4 +219,10 @@
     height:30px;
     background-color:#333;
     border:1px solid #000;
+}
+
+
+
+.invisivel{
+    display:none;
 }

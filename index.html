@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <main class="main">
 
-        <section class="list-of-pokes">
-            <div class="list-example one">
-                Carregando...
+        <section class="section-list-pokes">
+            <div class="find-poke">
+                <input class="input-poke" type="text" name="pokemon"/>
+                <button class="bt-procura"><img class="lupa" src="images/lupa-depositphotos-bgremover.png" alt="lupa"/></button>
             </div>
+            <section class="list-of-pokes">
+                <div class="list-example one">
+                    Carregando...
+                </div>
+            </section>
         </section>
+        
 
         <section class="pokemons-area">
             <section class="decoration-pokeDex">
@@ -62,5 +71,6 @@
     <script src="script/script.js"></script>
     <script src="script/adicionaNaLista.js"></script>
     <script src="script/mostraPoke.js"></script>
+    <script src="script/procuraPoke.js"></script>
 </body>
 </html>
