@@ -18,6 +18,10 @@ let types = [
     {type:"fairy", backgroundColors:"linear-gradient(#f87ea7, #fdd1e0)"},
     {type:"ice", backgroundColors:"linear-gradient(#113c43, #1a94a3)"},
 ]
+let listaDePokes = document.querySelector(".list-of-pokes");
+
+
+// formata lista vai ser responsavel, por pegar apenas order, e cada pokemon, e me devolver um array de números da ordem dos pokes 
 function formataLista(array){
     let orders = [];
     array.map(function(item){
@@ -26,30 +30,34 @@ function formataLista(array){
     return orders
 }
 
-
+// essa função recebe o array, e vai ordenar de acordo com os números recebidos no array de números, vai ordenar do menor para o maior
 function ordenaLista(array){
     let tamanhoDoArray = array.length;
     let listaOrdenada = [];
 
     for(let i = 0; i < tamanhoDoArray; i++){
+        // nessa solução usei o operador spread, logo depois de ver na documentação, ele resolveu o meu problema então eu usei ele
         let numeroMenor = Math.min(...array);
         listaOrdenada.push(numeroMenor);
 
         array.splice(array.indexOf(numeroMenor), 1);
+        // sempre que receber o minimo, e mandar para o array, eu vou excluir esse minimo, para que ele não possa se repetir.
     }
 
     return listaOrdenada
 }
-function criaNaLista(itemName, itemNumber, itemOrder, itemType){// adicionando o tipo type para mudar o background
+
+// essa função cria uma div, para fazer parte da lista, dá o nome, classe, tipo, e ordem.
+function criaItemDaLista(itemName, itemNumber, itemOrder){
     let itemCriado = document.createElement("div")
     itemCriado.classList.add("list-example")
     itemCriado.setAttribute("data-order", itemOrder);
-    itemCriado.setAttribute("data-type", itemType)
     itemCriado.textContent = `#${itemNumber} ${itemName}`;
 
     return itemCriado
 }
 
+// logo após a requisição ser feita, iniciarei essa criação da lista, pegando cada pokemon, e adicionando na lista.
 setTimeout(function(){
     let orders = formataLista(pokemonList);
 
@@ -59,8 +67,9 @@ setTimeout(function(){
     for(let i = 0; i < ordenar.length; i++){
         let poke = pokemonList.find((item) => item.order == ordenar[i])
 
-        listaDePokes.appendChild(criaNaLista(poke.name, poke.id, poke.order, poke.types[0].type.name))
+        listaDePokes.appendChild(criaItemDaLista(poke.name, poke.id, poke.order))
     }
+    //esse one só serve para exibir a mensagem de "carregando..."
     document.querySelector(".one").remove();
     document.querySelector(".front").removeAttribute("style");
     document.querySelector(".back").removeAttribute("style");

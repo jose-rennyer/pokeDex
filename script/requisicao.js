@@ -1,9 +1,15 @@
 // requisição área depois eu vejo um nome melhor.
 
+// setando a opacidade como 0, para que não apareça a ausencia de imagem, na tag img
 document.querySelector(".front").style.opacity = 0;
 document.querySelector(".back").style.opacity = 0;
+
+
 let pokemonList = [];
-let listaDePokes = document.querySelector(".list-of-pokes");
+
+
+// função para fazer requisição de 898 pokemons, e adicionar na pokemonList, cada um. 
+// estou sempre setando pokemonList como array vazio para que não acumule, e nem tenha chance de ocorrer.
 function pegarPokes(){
     pokemonList = [];
     for(let i = 1; i <= 898; i++){
