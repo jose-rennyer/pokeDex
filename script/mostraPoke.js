@@ -14,6 +14,7 @@ function mostraPoke(array, order){
     let pokemonExibido = array.find(item => item.order == order)
 
     trocar(pokemonExibido.sprites.front_default, pokemonExibido.sprites.back_default, pokemonExibido.types[0].type.name)
+    adicionaTipo(pokemonExibido.types)
     pokeName.textContent = pokemonExibido.name;
     // função que vai receber do pokemon o nome, sprite de frente e de costas, e também o tipo dele.
 }
@@ -41,6 +42,37 @@ function trocar(front, back, type){
         backImg.style.backgroundImage = colorBack.backgroundColors;
     }else{
         backImg.style.opacity = "0";
+    }  
+}
+
+// essa função recebe o array de tipos do pokemon requisitado, e faz um switch case, de acordo com o número de tipos dentro do pokemon
+function adicionaTipo(array){
+    let tipoOneImg = document.querySelectorAll(".tipo-img")
+    let tipoOneText = document.querySelectorAll(".tipo-info")
+
+    let tiposEncontrados = [];
+    let imgTipos = []
+    array.forEach((item)=>{
+        tiposEncontrados.push(item.type.name);
+    })
+
+    tiposEncontrados.forEach((item)=>{
+        imgTipos.push(types.find(tipoArray => tipoArray.type == item? true: false))
+    })
+
+    switch(tiposEncontrados.length){
+        case 1:
+            tipoOneImg[0].src = imgTipos[0].img;
+            tipoOneText[0].textContent = imgTipos[0].type
+            tipoOneImg[1].src = ""
+            tipoOneText[1].textContent = ""
+        break;
+        case 2:
+            tipoOneImg[0].src = imgTipos[0].img;
+            tipoOneText[0].textContent = imgTipos[0].type
+            tipoOneImg[1].src = imgTipos[1].img;
+            tipoOneText[1].textContent = imgTipos[1].type
+        break;
     }
-    
+
 }

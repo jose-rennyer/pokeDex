@@ -11,20 +11,7 @@
 </head>
 <body>
     <main class="main">
-
-        <section class="section-list-pokes">
-            <div class="find-poke">
-                <input class="input-poke" type="text" name="pokemon"/>
-                <button class="bt-procura"><img class="lupa" src="images/lupa-depositphotos-bgremover.png" alt="lupa"/></button>
-            </div>
-            <section class="list-of-pokes">
-                <div class="list-example one">
-                    Carregando...
-                </div>
-            </section>
-        </section>
         
-
         <section class="pokemons-area">
             <section class="decoration-pokeDex">
                 <div class="recipe-of-giant">
@@ -55,7 +42,16 @@
                         <div class="botao-menor azul"></div>
                     </section>
                     <div class="screen">
-                        <div class="green-screen"></div>
+                        <div class="green-screen">
+                            <div class="tipo-poke">
+                                <img class="tipo-img" src="" alt=""/>
+                                <p class="tipo-info"></p>
+                            </div>
+                            <div class="tipo-poke">
+                                <img class="tipo-img" src="" alt=""/>
+                                <p class="tipo-info"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -67,6 +63,19 @@
                 </div>
             </section>
         </section>
+
+        <section class="section-list-pokes">
+            <div class="find-poke">
+                <input class="input-poke" type="text" name="pokemon"/>
+            </div>
+            <section class="list-of-pokes">
+                <div class="list-example one">
+                    Carregando...
+                </div>
+            </section>
+        </section>
+        
+
     </main>
     <script src="script/requisicao.js"></script>
     <script src="script/adicionaNaLista.js"></script>
