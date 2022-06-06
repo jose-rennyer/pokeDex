@@ -73,4 +73,4 @@ setTimeout(function(){
     document.querySelector(".one").remove();
     document.querySelector(".front").removeAttribute("style");
     document.querySelector(".back").removeAttribute("style");
-},2000)
+},3000)

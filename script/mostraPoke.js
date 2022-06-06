@@ -23,7 +23,7 @@ function mostraPoke(array, order){
 // milisegundos, para que se possa ter um timing certo da requisição, preparação e o resto. 
 setTimeout(()=> {
     mostraPoke(pokemonList, 1);
-}, 2000)
+}, 3000)
 
 
 // essa função será responsavel por receber a foto, de frente e costas, e o tipo do pokemon, e exibir na tela cada uma dessas caracteristicas
